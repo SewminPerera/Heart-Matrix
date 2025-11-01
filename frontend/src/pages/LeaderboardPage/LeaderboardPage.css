@@ -1,0 +1,37 @@
+.leaderboard-page {
+  text-align: center;
+  color: white;
+  padding: 3rem;
+  background: linear-gradient(to bottom, #0a0e27, #121740);
+  min-height: 100vh;
+}
+
+.leaderboard-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-table {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #1b1f4b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #2c3172;
+}
+
+.leaderboard-table th {
+  background-color: #23276d;
+  color: #f6d860;
+  text-transform: uppercase;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #1a1e52;
+}

@@ -1,0 +1,14 @@
+/* We can reuse the same placeholder style */
+.placeholder-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    gap: 20px;
+}
+.placeholder-page h1 {
+    font-size: 2rem;
+    color: var(--dark-blue);
+}

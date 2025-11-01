@@ -1,0 +1,35 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.play-button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 0.9rem 3rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.play-button:hover {
+  background-color: #3b82f6;
+}
