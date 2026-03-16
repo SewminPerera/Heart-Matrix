@@ -1,0 +1,125 @@
+.df-wrap {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(#d8f0ff, #c7e6ff);
+  overflow: hidden;
+
+}
+
+/* Sky clouds */
+.df-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.df-cloud {
+   position:absolute;
+  width:220px; height:80px;
+  top:10%;
+  left:-260px;
+  background:#fff;
+  border-radius:50px;
+  filter: blur(1px);
+  opacity:.9;
+  box-shadow:
+    40px 10px 0 10px #fff,
+    90px -8px 0 6px #fff,
+    150px 6px 0 12px #fff;
+  animation: drift 70s linear infinite;
+}
+
+.df-cloud.c1{ top:12%; animation-duration: 70s; }
+.df-cloud.c2{ top:26%; transform: scale(.9); animation-duration: 85s; }
+.df-cloud.c3{ top:38%; transform: scale(1.1); animation-duration: 75s; }
+.df-cloud.c4{ top:20%; transform: scale(.8); animation-duration: 90s; }
+@keyframes drift{ to{ transform: translateX(160vw) } }
+
+/* Title */
+.df-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  color: #1a1a1a;
+  z-index: 10;
+  position: relative;
+}
+
+.df-title span {
+  color: #ff4f9a;
+}
+
+.df-cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+.df-card {
+  width: 260px;
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: 4px solid #f0c04d;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.df-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.df-img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.df-card h3 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* Coins */
+.df-coin {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url('/coin.png') no-repeat center/cover;
+}
+
+.coin-1 {
+  left: 160px;
+  top: 240px;
+}
+
+.coin-2 {
+  right: 220px;
+  top: 150px;
+}
+
+.coin-3 {
+  right: 160px;
+  top: 320px;
+}
+
+/* Ground */
+.df-ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: repeating-linear-gradient(
+    90deg,
+    #6b3e1e,
+    #6b3e1e 40px,
+    #8a552b 40px,
+    #8a552b 80px
+  );
+}

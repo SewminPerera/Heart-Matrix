@@ -1,0 +1,82 @@
+.lb-wrap{
+  position:relative;
+  min-height: calc(100dvh - 64px);
+  overflow:hidden;
+  background: linear-gradient(180deg, #c5e9ff, #eaf7ff);
+}
+.lb-sky .cloud{
+  position:absolute; left:-280px; top:22%;
+  width:260px; height:90px; border-radius:60px; background:#fff;
+  box-shadow: 60px 8px 0 8px #fff, 120px -10px 0 12px #fff;
+  opacity:.9; animation: glide 75s linear infinite;
+}
+.lb-sky .cloud.slow{ top:36%; transform: scale(.9); animation-duration: 95s; }
+@keyframes glide{ to { transform: translateX(160vw) } }
+
+.lb-card{
+  position:relative; z-index:2;
+  max-width: 760px; margin: 40px auto 140px; padding: 24px 18px 8px;
+  border-radius: 18px; background:#fff; border:3px solid #ffde8a;
+  box-shadow: 0 12px 28px rgba(16,42,67,.12);
+}
+
+.lb-title{
+  text-align:center; color:#102a43; margin: 6px 0 14px;
+}
+
+.lb-table{ padding: 8px 2px 18px; }
+.lb-row{
+  display:grid; grid-template-columns: 40px 44px 1fr 100px;
+  align-items:center; gap: 10px;
+  padding: 10px 12px;
+  border-radius:12px; background:#f9fcff; border:1px solid #eef3f8;
+  margin-bottom:8px;
+}
+.lb-row .pos{ text-align:center; font-weight:700; color:#6b7b8a; }
+.lb-row .ava{ width:36px; height:36px; border-radius:50%; }
+.lb-row .name{ color:#102a43; font-weight:600; }
+.lb-row .score{ text-align:right; color:#0f6; }
+
+.lb-ground{
+  position:absolute; inset:auto 0 0 0; height:96px;
+  background:
+    linear-gradient(#8b501c 0 12px, transparent 12px),
+    repeating-linear-gradient(90deg, #a9652b 0 48px, #8b501c 48px 96px);
+  border-top:8px solid #6e3e14;
+}
+
+/* --- ADD THIS AT THE BOTTOM OF LeaderboardPage.css --- */
+
+.lb-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lb-tab {
+  border: 2px solid #ffde8a;
+  background: #fff;
+  color: #a08a4c;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lb-tab:hover {
+  background: #fffbef;
+}
+
+.lb-tab.active {
+  background: #ffde8a;
+  color: #6d5820;
+}
+
+.muted {
+  text-align: center;
+  padding: 20px;
+  color: #6b7b8a;
+}

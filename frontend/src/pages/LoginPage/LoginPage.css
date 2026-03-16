@@ -1,0 +1,124 @@
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #c5e9ff, #eaf7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* drifting clouds */
+.login-page::before,
+.login-page::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -250px;
+  width: 220px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 40px 10px 0 10px #fff, 90px -8px 0 6px #fff,
+    150px 6px 0 12px #fff;
+  opacity: 0.9;
+  animation: cloud-move 70s linear infinite;
+}
+.login-page::after {
+  top: 35%;
+  transform: scale(0.9);
+  animation-duration: 90s;
+}
+@keyframes cloud-move {
+  to {
+    transform: translateX(160vw);
+  }
+}
+
+/* card */
+.login-card {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 18px;
+  border: 3px solid #ffde8a;
+  box-shadow: 0 12px 28px rgba(16, 42, 67, 0.12);
+  padding: 40px 28px 32px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.login-header h1 {
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+.login-header h2 {
+  color: #ff3e89;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form input {
+  border: 1px solid #ccd7e2;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.login-form input:focus {
+  border-color: #ffb52e;
+  box-shadow: 0 0 0 2px #fff3d1;
+}
+
+/* yellow button */
+.login-btn {
+  margin-top: 4px;
+  border: none;
+  padding: 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #1b1200;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffd07b, #ffb52e);
+  box-shadow: 0 6px 0 #e89d00, 0 16px 28px rgba(0, 0, 0, 0.18);
+  transition: transform 0.1s ease, filter 0.2s ease;
+}
+.login-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.google-login-container {
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.login-switch {
+  margin-top: 12px;
+  color: #102a43;
+}
+.login-switch a {
+  color: #ff3e89;
+  text-decoration: none;
+  font-weight: 600;
+}

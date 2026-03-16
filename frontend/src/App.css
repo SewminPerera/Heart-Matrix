@@ -1,0 +1,75 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background: url("https://i.ibb.co/d7cq5bY/mario-bg-clouds.png"),
+              linear-gradient(to top, #89f7fe 0%, #66a6ff 100%);
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  animation: skyScroll 40s linear infinite;
+  color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sky scrolling effect */
+@keyframes skyScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: -2000px 0; }
+}
+
+
+.main-content::before {
+  top: 40%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.main-content::after {
+  top: 60%;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+@keyframes floatCoin {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+/* Sky scrolling effect */
+@keyframes skyScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: -2000px 0; }
+}
+
+
+.main-content::before {
+  top: 40%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.main-content::after {
+  top: 60%;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+@keyframes floatCoin {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+.main-content {
+  background-size: 400% 400%;
+  animation: gentleMove 12s ease infinite;
+}
+
