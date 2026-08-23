@@ -18,7 +18,7 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.get('/', (_req, res) => res.send('❤️ Heart Matrix API is running...'));
+app.get('/', (_req, res) => res.send('Heart Matrix API is running...'));
 app.post('/api/users/register', async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -37,7 +37,7 @@ app.post('/api/users/register', async (req, res) => {
       token,
     });
   } catch (error) {
-    console.error('❌ Registration Error:', error);
+    console.error('Registration Error:', error);
     res.status(500).json({ message: 'Server error during registration' });
   }
 });
@@ -62,7 +62,7 @@ app.post('/api/users/login', async (req, res) => {
       token,
     });
   } catch (error) {
-    console.error('❌ Login Error:', error);
+    console.error('Login Error:', error);
     res.status(500).json({ message: 'Server error during login' });
   }
 });
@@ -102,7 +102,7 @@ app.post('/api/auth/google', async (req, res) => {
       token: jwtToken,
     });
   } catch (error) {
-    console.error('❌ Google Login Error:', error);
+    console.error('Google Login Error:', error);
     res.status(500).json({ message: 'Failed to authenticate with Google' });
   }
 });
@@ -120,7 +120,7 @@ const saved = await newScore.save();
 res.status(201).json(saved);
 
 } catch (error) {
-console.error('❌ Error saving score:', error);
+console.error('Error saving score:', error);
  res.status(500).json({ message: 'Server error while saving score' });
 }
 });
@@ -141,16 +141,16 @@ app.get('/api/scores', async (req, res) => {
 
 res.json(top);
 } catch (error) {
- console.error('❌ Error fetching leaderboard:', error);
+ console.error(' Error fetching leaderboard:', error);
  res.status(500).json({ message: 'Server error while fetching leaderboard' }); }
 });
 
 app.use('/api', userRoutes);
 app.use((_req, res) => res.status(404).json({ message: 'Route not found' }));
 app.use((err, _req, res, _next) => {
-  console.error('🔥 Unhandled Error:', err.stack);
+  console.error('Unhandled Error:', err.stack);
   res.status(500).json({ message: 'Internal Server Error' });
 });
 
 // Start
-app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

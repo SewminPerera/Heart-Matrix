@@ -29,7 +29,7 @@ exports.getMe = async (req, res) => {
       updatedAt: user.updatedAt,
     });
   } catch (error) {
-    console.error('❌ getMe error:', error);
+    console.error(' getMe error:', error);
     res.status(500).json({ message: 'Server error fetching profile' });
   }
 };
@@ -55,7 +55,7 @@ exports.submitGameResult = async (req, res) => {
       gamesPlayed: user.gamesPlayed,
     });
   } catch (error) {
-    console.error('❌ submitGameResult error:', error);
+    console.error(' submitGameResult error:', error);
     res.status(500).json({ message: 'Server error submitting game result' });
   }
 };
@@ -70,7 +70,7 @@ exports.rerollAvatar = async (req, res) => {
 
     res.json({ avatarSeed: user.avatarSeed, avatarUrl: diceBearUrl(user.avatarSeed) });
   } catch (error) {
-    console.error('❌ rerollAvatar error:', error);
+    console.error(' rerollAvatar error:', error);
     res.status(500).json({ message: 'Server error updating avatar' });
   }
 };

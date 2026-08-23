@@ -1,0 +1,4 @@
+node_modules/
+.gitgnore
+Dockerfile
+.README.md

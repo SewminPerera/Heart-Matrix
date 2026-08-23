@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # 1. Your MongoDB Database
+  database:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  # 2. Your Express Backend
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      # This points your backend to the Docker Mongo container instead of localhost
+      - mongodb://localhost:27017/heartmatrix_new
+
+  # 3. Your React Frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+# This keeps your database data saved even if you shut Docker down
+volumes:
+  mongo-data:
